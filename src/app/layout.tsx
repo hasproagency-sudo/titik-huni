@@ -1,17 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import clsx from "clsx";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 /* ================================
-FONT — Manrope (single typeface system)
+FONT — Manrope (single typeface system, self-hosted to avoid build-time Google Fonts fetch flakes)
 ================================ */
-const manrope = Manrope({
-  subsets: ["latin"],
+const manrope = localFont({
+  src: "./fonts/manrope-latin.woff2",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: "200 800",
   variable: "--font-manrope",
   preload: true,
 });
@@ -146,6 +147,7 @@ export default function RootLayout({
 
         {/* Analytics & UI Tools */}
         <Analytics />
+        <SpeedInsights />
         <Toaster
           position="top-center"
           toastOptions={{
