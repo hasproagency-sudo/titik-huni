@@ -1,0 +1,80 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing & coverage
+/coverage
+/.nyc_output/
+/test-results/
+/playwright-report/
+/blob-report/
+/tests/
+
+# Temporary local testing scripts, storage & scratchpad
+/scratch/
+/storage-backups/
+/storage-manifests/
+/scripts/
+
+# Temporary screenshots, test artifacts & cache
+/screenshots/
+/test-artifacts/
+/playwright/.cache/
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc & OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.pem
+
+# debug logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# local env files
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Supabase temporary files
+/supabase/.temp/
+/supabase/migrations
+
+# agents
+.agents
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# root documentation & agent scratch
+/*.md
+!/README.md
+!/readme.md
+!/LICENSE.md
+!/PANDUAN_ADMIN_TITIKHUNI.md
+out.html
+
+# project documentation & tests
+/docs/
+/docs/test/
+/docs/qa-reports/**/screenshots/
+/docs/qa-reports/**/logs/
